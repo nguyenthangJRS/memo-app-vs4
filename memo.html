@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メモ機能（きのう）</title>
+
+    <link rel="icon" href="hint.ico">
+    <link rel="stylesheet" href="css/memo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="back">
+        <button id="btn99" type="button" onclick="history.back()">back</button>
+    </div>
+
+    <header>
+        <h1 class="text_color">メモ機能（きのう）</h1>
+        <h2>LocalStorage</h1>
+    </header>
+
+    <main>
+        <div class="field01">
+            <label for="textKey">Key:</label>
+            <textarea name="textKey" id="textKey" cols="40" rows="2" placeholder="キーを入力してください"></textarea>
+        </div>
+
+        <div class="field02">
+            <label for="textMemo">Memo:</label>
+            <textarea name="textMemo" id="textMemo" cols="40" rows="10" placeholder="件名を入力してください"></textarea>
+        </div>
+
+        <div class="btn-area">
+            <input type="submit" value="保存" id="save" class="btn">
+            <!-- <input type="submit" value="削除" id="del" class="btn"> -->
+        </div>
+
+        <table id="table1" class="tablesorter">
+            <thead>
+                <tr>
+                    <th class="with10">選択</th>
+                    <th class="with10">キー</th>
+                    <th class="with30">メモ</th>
+                    <th class="with10">削除</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                <!-- create by script   -->
+            </tbody>
+        </table>
+
+        <div class="btn-area">
+            <input type="submit" value="選択" id="select" class="btn">
+            <input type="submit" value="全て削除" id="allClear" class="btn">
+            <input type="submit" value="選んだもの削除" id="deleteItem" class="btn">
+        </div>
+
+    </main>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
+    <!-- sweetalert  -->
+    <script src="js/memo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7.1.0/dist/promise.min.js"></script>
+</body>
+
+</html>
